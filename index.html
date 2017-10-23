@@ -51,7 +51,166 @@
 	<hr>
 	<img src="gitfilestatus.jpg">
 
+	<hr>
+	<pre>
+viktor [6:20 PM] 
+а как изменить ситуацию из одного репозитория gitTutorial на другой gitTutorial2
 
+
+v.gachkovsky 
+[6:22 PM] 
+git remote remove origin
+git remote add origin git@github.com:vlutsko/gitTutorial2.git
+
+
+viktor [6:24 PM] 
+Не получилось:
+
+Home_x64@Home_x64-ÏÊ MINGW64 /e/git (master)
+$ git remote remove origin
+
+Home_x64@Home_x64-ÏÊ MINGW64 /e/git (master)
+$ git remote add origin git@github.com:vlutsko/gitTutorial2.git
+
+Home_x64@Home_x64-ÏÊ MINGW64 /e/git (master)
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+
+v.gachkovsky 
+[6:26 PM] 
+-u не надо. У тебя похоже git не настроен. делал git config --global user.email "email@mail.com" и так далее?
+
+
+[6:26] 
+email@mail.com тут свое мыло на которое зареган github
+
+
+viktor [6:27 PM] 
+git config --global user.email "email@mail.com" и так далее делал, вот только пароль не знаю где и как установить
+
+
+[6:28] 
+git config --list показываает все, что указал
+
+
+[6:29] 
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+http.sslcainfo=G:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=manager
+user.name=vlutsko
+user.email=v_lutsko@ukr.net
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=git@github.com:vlutsko/gitTutorial2.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+v.gachkovsky [6:32 PM] 
+попробуй пересоздать remote
+git remote remove origin
+git remote add origin https://github.com/vlutsko/gitTutorial2.git
+
+
+[6:32] 
+и снова попробуй запушить
+
+
+viktor [6:35 PM] 
+может вообще гит переустановить? А то я пытался пользоваться гитом еще почти год назад, но что-то намутил там и возможно и сейчас какие то проблемы
+
+
+v.gachkovsky [6:35 PM] 
+не, не думаю
+
+
+[6:35] 
+не получилось после смены ремоута?
+
+
+viktor [6:38 PM] 
+После этих команд:
+$ git remote remove origin
+
+Home_x64@Home_x64-ÏÊ MINGW64 /e/git (master)
+$ git remote add origin https://github.com/vlutsko/gitTutorial2.git
+
+Home_x64@Home_x64-ÏÊ MINGW64 /e/git (master)
+
+вообще пусто -ничего не ответил
+
+
+slackbot [6:38 PM] Only visible to you
+Pssst! I didn’t unfurl https://github.com/vlutsko/gitTutorial2.git because it was already shared in this channel quite recently (within the last hour) and I didn’t want to clutter things up.
+
+
+v.gachkovsky [6:38 PM] 
+а вот сейчас пробуй пушить (edited)
+
+
+viktor [6:40 PM] 
+Хе-хе получилось. А что ж было не так?
+
+
+[6:41] 
+Как то у нас в слаке молчание в основном. А тут задал вопрос и оказывается все тут. Спасибо всем большое!!!
+
+
+v.gachkovsky 
+[6:42 PM] 
+просто первый раз я написал как добавить репозиторий через протокол ssh. а там надо ключ в гит аккаунт добавлять
+
+
+[6:42] 
+а потом исправил через https )
+
+
+[6:42] 
+там ключи не надо никакие )
+
+
+[6:43] 
+гит умеет работать через SSH и через HTTPS
+
+
+viktor [6:44 PM] 
+ясно, через ssh позже наверное будем разбираться.
+А чтобы сменить репозиторий, то команда git remote remove origin ?
+
+
+v.gachkovsky 
+[6:48 PM] 
+Это что бы удалить ремоут с именем origin
+
+
+viktor [6:51 PM] 
+Володь, спасибо большое, так все быстро получилось...
+На завтра ж домашку нужно делать :slightly_smiling_face:	
+	
+	
+	</pre>
 
 </body>
 

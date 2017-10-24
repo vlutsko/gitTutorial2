@@ -2,7 +2,12 @@
 /*-click Me!- on branch r125-click-handler*/
 -click Me!- on branch r126-change-hello-page
 
+
 <label for="purchase-button">
-	<button>-Click Me!-</button>
+	<button onclick="clickHandler">-Click Me!-</button>
 </label>
+
+function clickHandler(){
+	console.log('Nothing ^___^');
+}
 
